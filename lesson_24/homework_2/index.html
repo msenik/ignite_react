@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Homework 1</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      #user-list, #user-table{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      .transition-item{
+        overflow-x: hidden;
+        transition: transform 0.4s, opacity 0.5s;
+      }
+      .transition-appear {
+        opacity: 0;
+        transform: translate(0,100px);
+      }
+
+      .transition-appear.transition-appear-active {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+      .transition-leave {
+        opacity: 1;
+        transform: scale(1);
+        transform: translate(0, 0);
+      }
+
+      .transition-leave.transition-leave-active {
+        opacity: 0;
+        transform: translate(0,100px);
+      }
+    </style>
+</head>
+<body>
+
+    <div id="root"></div>
+    <script src="build/bundle.js"></script>
+
+</body>
+</html>
